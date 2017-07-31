@@ -75,6 +75,11 @@ var app = new Vue({
       e.preventDefault();
       this.error = false;
 
+      if (!this.endpoint) {
+        $('#endpoint').animation('shake');
+        return this.displayError('Select an endpoint');
+      }
+
       try {
         var json = JSON.parse(this.request);
       } catch (err) {
@@ -87,7 +92,7 @@ var app = new Vue({
         this.status = status;
         if (status == 0) {
           $('#request').animation('shake');
-          this.displayError('Make sure bankbot server is running')
+          this.displayError(`Make sure bankbot server is running at ${this.baseUrl}`);
         } else {
           this.response = JSON.stringify(JSON.parse(responseText), null, 2);
           if (status != 200) $('#response').animation('shake');
