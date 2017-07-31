@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bankbot></title>
+    <title>Bankbot</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/css/kube.min.css">
     <script src="https://unpkg.com/vue@2.4.2"></script>
 </head>
 <body>
-
     <div id="app" style="padding:20px;">
       <h1>{{title}} <span style="font-size:12px;font-weight:thin;">v 1.0</span></h1>
       <div class="form-item">
@@ -17,11 +16,9 @@
           <option disabled value="">Please select one</option>
           <option v-for="option in options" v-bind:value="option.value">{{option.name}}</option>
         </select>
-
         <div v-if="error" style="padding-top:20px;">
-          <div class="message error"> {{error}}   <span class="close small" v-on:click="error=false;"></span></div>
+          <div class="message error"> {{error}} <span class="close small" v-on:click="error=false;"></span></div>
         </div>
-
       </div>
       <div class="row gutters">
         <div id="request" class="col col-6">
@@ -47,7 +44,6 @@
       </div>
     </div>
 
-    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/kube/6.5.2/js/kube.min.js"></script>
     <script src="./post-json.js"></script>

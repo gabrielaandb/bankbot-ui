@@ -375,6 +375,40 @@ var validatePin = {
   }
 }
 
+var changePin = {
+  "message": {
+    "header": {
+      "fintechId":   "undefined",
+      "userAgent":   "undefined",
+      "sessionDate": "undefined",
+      "sessionTime": "undefined",
+      "sessionId":   "undefined",
+      "retryFlag":   "0",
+      "locale":      "us",
+      "language":    "en",
+      "entityCode":  "bankbot",
+      "userId":      "john",
+      "password":    "john",
+      "userIpAddress":            "undefined",
+      "transactionNumber":        "1",
+      "transactionApprovalLevel": "undefined",
+      "transactionFee":           "0",
+      "transactionFeeFlag":       "0",
+      "transactionLegend":        "undefined"
+    },
+    "body": {
+      "customerDetails": {
+        "productDetails": {
+          "productCode": "credit card",
+          "accountNumber": "<accountNumber>",
+          "oldPhysicalArtifactPin": "<pin>",
+          "newPhysicalArtifactPin": "<pin>"
+        }
+      }
+    }
+  }
+}
+
 var SAMPLE_REQUESTS = {
   '/relationship-summary/get': getRelationshipSummary,
   '/manage-user-access/validate': validateUserAccess,
@@ -386,6 +420,6 @@ var SAMPLE_REQUESTS = {
   '/manage-product-access/block': blockProductAccess,
   '/manage-product-access/unblock': unblockProductAccess,
   '/manage-transfers/make-transfer': makeTransfer,
-  '/manage-pin/validate': validatePin
-
+  '/manage-pin/validate': validatePin,
+  '/manage-pin/change': changePin
 }

@@ -54,6 +54,10 @@ var app = new Vue({
         'name': '009 Manage PIN > Validate',
         'value': '/manage-pin/validate'
       },
+      {
+        'name': '009 Manage PIN > Change',
+        'value': '/manage-pin/change'
+      },
     ]
   },
   methods: {

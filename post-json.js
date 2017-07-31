@@ -9,7 +9,7 @@ var postJson = (url, json, cb) => {
     xmlhttp.onreadystatechange = function () { //Call a function when the state changes.
       if (xmlhttp.readyState == 4) {
         if (cb) cb(xmlhttp.status, xmlhttp.responseText);
-        resolve(xmlhttp.status, xmlhttp.responseText);
+        resolve({status: xmlhttp.status, responseText: xmlhttp.responseText});
       }
     };
     xmlhttp.send(JSON.stringify(json));
