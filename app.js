@@ -1,9 +1,8 @@
 
-var baseUrl = 'http://localhost:8888';
-
 var app = new Vue({
   el: '#app',
   data: {
+    baseUrl: 'http://localhost:8888',
     endpoint: '',
     request: '',
     status: '',
@@ -79,7 +78,7 @@ var app = new Vue({
         return this.displayError('Invalid json')
       }
 
-      var url = `${baseUrl}${this.endpoint}`;
+      var url = `${this.baseUrl}${this.endpoint}`;
       postJson(url, JSON.parse(this.request), (status, responseText) => {
         this.status = status;
         if (status == 0) {
@@ -101,6 +100,20 @@ var app = new Vue({
     },
     displayError (message) {
       this.error = message;
+    },
+    getParameterByName (name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
+  },
+  beforeMount () {
+    var url = this.getParameterByName('url');
+    if (url) this.baseUrl = url;
+    console.log(`base URL set to ${this.baseUrl}`);
   }
 })
