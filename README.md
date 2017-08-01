@@ -3,7 +3,6 @@
 
 > UI for testing bankbot endpoints.
 
-<img src="bankbot.jpg" alt="bankbot" style="width: 200px;"/>
 
 ## Usage
 
@@ -15,3 +14,6 @@ open index.html
 
 To point UI to a custom server, add 'url' query parameter to URL. Example:
 `http://bankbotui.com?url=http://yourendpoint.com`
+
+
+![Bankbot](/bankbot.jpg)
