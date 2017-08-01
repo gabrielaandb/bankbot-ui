@@ -3,7 +3,7 @@
 
 > UI for testing bankbot endpoints.
 
-![Bankbot](/bankbot.jpg =200x)
+<img src="bankbot.jpg" alt="bankbot" style="width: 200px;"/>
 
 ## Usage
 
