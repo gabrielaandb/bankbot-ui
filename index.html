@@ -13,9 +13,11 @@
       }
     </style>
 </head>
-<body class="">
+<body class="small">
     <div id="app" style="padding:20px;">
-      <h1>{{title}} <span style="font-size:12px;font-weight:thin;">v 1.0</span></h1>
+
+      <h1><img style="width:35px;" src="bankbot.jpg"> {{title}} <span style="font-size:12px;font-weight:thin;">v 1.0</span></h1>
+
       <div class="form-item">
         <label>Endpoint</label>
         <select id="endpoint" v-model="endpoint" v-on:change="change">

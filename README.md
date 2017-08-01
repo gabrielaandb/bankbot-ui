@@ -3,6 +3,7 @@
 
 > UI for testing bankbot endpoints.
 
+![Bankbot](/bankbot.jpg)
 
 ## Usage
 
