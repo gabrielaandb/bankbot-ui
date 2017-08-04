@@ -81,13 +81,7 @@ var accountDetails = {
     },
     "body": {
       "customerDetails": {
-        "entityUserIdType": "customer",
-        "entityUserId":     "john",
         "productDetails": {
-          "productType":    "checking",
-          "productCode":    "checking",
-          "subProductType": "checking",
-          "productCurrencyCode": "usd",
           "accountDetails": {
             "accountNumber": "accountNumber"
           }
@@ -120,15 +114,10 @@ var getTransactionActivity = {
     },
     "body": {
       "customerDetails": {
-        "entityUserIdType": "customer",
-        "entityUserId":     "john",
         "productDetails": {
-          "productType": "checking",
-          "productCode": "checking",
-          "subProductType": "checking",
-          "productCurrencyCode": "usd",
-          "productTransactionRole": "undefined",
-          "accountNumber": "<accountNumber>"
+          "accountDetails": {
+            "accountNumber": "accountNumber"
+          }
         }
       }
     }
