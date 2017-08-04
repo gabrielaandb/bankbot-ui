@@ -23,7 +23,6 @@ var getRelationshipSummary = {
     },
     "body": {
       "customerDetails": {
-        "entityUserIdType": "customer",
         "entityUserId":     "john"
       }
     }
