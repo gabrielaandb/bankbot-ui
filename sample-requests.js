@@ -47,12 +47,8 @@ var accountDetails = {
   "message": {
     "header": header,
     "body": {
-      "customerDetails": {
-        "productDetails": {
-          "accountDetails": {
-            "accountNumber": "accountNumber"
-          }
-        }
+      "accountDetails": {
+        "accountNumber": "accountNumber"
       }
     }
   }
@@ -62,12 +58,8 @@ var getTransactionActivity = {
   "message": {
     "header": header,
     "body": {
-      "customerDetails": {
-        "productDetails": {
-          "accountDetails": {
-            "accountNumber": "accountNumber"
-          }
-        }
+      "accountDetails": {
+        "accountNumber": "accountNumber"
       }
     }
   }
@@ -111,10 +103,8 @@ var blockProductAccess = {
   "message": {
     "header": header,
     "body": {
-      "customerDetails": {
-        "productDetails": {
-          "accountNumber": "<accountNumber>"
-        }
+      "accountDetails": {
+        "accountNumber": "<accountNumber>"
       }
     }
   }
@@ -124,10 +114,8 @@ var unblockProductAccess = {
   "message": {
     "header": header,
     "body": {
-      "customerDetails": {
-        "productDetails": {
-          "accountNumber": "<accountNumber>"
-        }
+      "accountDetails": {
+        "accountNumber": "<accountNumber>"
       }
     }
   }
@@ -137,19 +125,19 @@ var makeTransfer = {
   "message": {
     "header": header,
     "body": {
-      "customerDetails": {
-        "productDetails": [
-          {
-            "accountNumber": "<sourceAccountNumber>",
-          },
-          {
-            "accountNumber": "<destinationAccountNumber>",
+      "accountDetails": [
+        {
+          "accountNumber": "<sourceAccountNumber>",
+        },
+        {
+          "accountNumber": "<destinationAccountNumber>",
+          "transactionDetails": {
             "amountDetails": {
               "amountValue": "10.00"
             }
           }
-        ]
-      }
+        }
+      ]
     }
   }
 }
@@ -158,11 +146,9 @@ var validatePin = {
   "message": {
     "header": header,
     "body": {
-      "customerDetails": {
-        "productDetails": {
-          "accountNumber": "<accountNumber>",
-          "physicalArtifactPin": "<pin>"
-        }
+      "accountDetails": {
+        "accountNumber": "<accountNumber>",
+        "physicalArtifactPin": "<pin>"
       }
     }
   }
@@ -172,12 +158,10 @@ var changePin = {
   "message": {
     "header": header,
     "body": {
-      "customerDetails": {
-        "productDetails": {
-          "accountNumber": "<accountNumber>",
-          "physicalArtifactPin": "<pin>",
-          "newPhysicalArtifactPin": "<pin>"
-        }
+      "accountDetails": {
+        "accountNumber": "<accountNumber>",
+        "physicalArtifactPin": "<pin>",
+        "newPhysicalArtifactPin": "<pin>"
       }
     }
   }
