@@ -60,10 +60,13 @@ var openAccount = {
     "body": {
       "productDetails": {
         "productType": "001",
+        "subProductType": "undefined",
+        "productCurrencyCode": "undefined",
         "accountDetails": {
           "accountName": "My new checking account",
           "physicalArtifactFlag": false,
-          "physicalArtifactPin": "undefined"
+          "physicalArtifactPin": "undefined",
+          "accountCurrentBalance": 0
         }
       }
     }

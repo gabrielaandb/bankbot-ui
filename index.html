@@ -19,7 +19,7 @@
       <h1><a href="https://github.com/gabrielaandb/bankbot-ui" target="_blank"><img style="width:35px;" src="bankbot.jpg"></a> {{title}} <span style="font-size:12px;font-weight:thin;">v 1.0</span></h1>
 
       <div class="form-item">
-        <label>Endpoint</label>
+        <label>Service</label>
         <select id="endpoint" v-model="endpoint" v-on:change="change">
           <option disabled value="">Please select one</option>
           <option v-for="option in options" v-bind:value="option.value">{{option.name}}</option>
@@ -32,6 +32,9 @@
         <div id="request" class="col col-6">
           <fieldset>
             <legend>Request</legend>
+            <p v-if="endpoint">
+              {{ endpoint }}
+            </p>
             <form>
               <div class="form-item">
                 <textarea style="resize:vertical;font-family:monospace;" class="smaller" rows="12" v-model="request">{{request}}</textarea>

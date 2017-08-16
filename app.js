@@ -102,8 +102,13 @@ var app = new Vue({
           $('#request').animation('shake');
           this.displayError(`Make sure bankbot server is running at ${this.baseUrl}`);
         } else {
-          this.response = JSON.stringify(JSON.parse(responseText), null, 2);
           if (status != 200) $('#response').animation('shake');
+
+          try {
+            this.response = JSON.stringify(JSON.parse(responseText), null, 2);
+          } catch (err) {
+            this.response = responseText;
+          }
         }
       })
     },
