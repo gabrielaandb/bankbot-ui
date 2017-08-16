@@ -48,7 +48,34 @@ var accountDetails = {
     "header": header,
     "body": {
       "accountDetails": {
-        "accountNumber": "accountNumber"
+        "accountNumber": "<accountNumber>"
+      }
+    }
+  }
+}
+
+var openAccount = {
+  "message": {
+    "header": header,
+    "body": {
+      "productDetails": {
+        "productType": "001",
+        "accountDetails": {
+          "accountName": "My new checking account",
+          "physicalArtifactFlag": false,
+          "physicalArtifactPin": "undefined"
+        }
+      }
+    }
+  }
+}
+
+var closeAccount = {
+  "message": {
+    "header": header,
+    "body": {
+      "accountDetails": {
+        "accountNumber": "<accountNumber"
       }
     }
   }
@@ -59,7 +86,7 @@ var getTransactionActivity = {
     "header": header,
     "body": {
       "accountDetails": {
-        "accountNumber": "accountNumber"
+        "accountNumber": "<accountNumber>"
       }
     }
   }
@@ -171,6 +198,8 @@ var SAMPLE_REQUESTS = {
   '/relationship-summary/get': getRelationshipSummary,
   '/manage-user-access/validate': validateUserAccess,
   '/manage-account/details': accountDetails,
+  '/manage-account/open': openAccount,
+  '/manage-account/close': closeAccount,
   '/get-transaction-activity/account-activity': getTransactionActivity,
   '/manage-personal-info/get': getPersonalInfo,
   '/manage-authentication-token/generate': generateAuthenticationToken,

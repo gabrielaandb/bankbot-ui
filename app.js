@@ -23,6 +23,14 @@ var app = new Vue({
         'value': '/manage-account/details'
       },
       {
+        'name': '003 Manage Account > Open',
+        'value': '/manage-account/open'
+      },
+      {
+        'name': '003 Manage Account > Close',
+        'value': '/manage-account/close'
+      },
+      {
         'name': '004 Get Transaction Activity > Account Activity',
         'value': '/get-transaction-activity/account-activity'
       },
