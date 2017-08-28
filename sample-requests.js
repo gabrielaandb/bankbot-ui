@@ -172,6 +172,17 @@ var makeTransfer = {
   }
 }
 
+var cancelTransfer = {
+  "message": {
+    "header": header,
+    "body": {
+      "transactionDetails": {
+        "transactionReferenceNumber": "<transactionReferenceNumber>"
+      }
+    }
+  }
+}
+
 var validatePin = {
   "message": {
     "header": header,
@@ -210,6 +221,7 @@ var SAMPLE_REQUESTS = {
   '/manage-product-access/block': blockProductAccess,
   '/manage-product-access/unblock': unblockProductAccess,
   '/manage-transfers/make-transfer': makeTransfer,
+  '/manage-transfers/cancel-transfer': cancelTransfer,
   '/manage-pin/validate': validatePin,
   '/manage-pin/change': changePin
 }

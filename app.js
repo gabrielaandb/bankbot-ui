@@ -59,6 +59,10 @@ var app = new Vue({
         'value': '/manage-transfers/make-transfer'
       },
       {
+        'name': '008 Manage Transfers > Cancel',
+        'value': '/manage-transfers/cancel-transfer'
+      },
+      {
         'name': '009 Manage PIN > Validate',
         'value': '/manage-pin/validate'
       },

@@ -4,6 +4,7 @@
 var postJson = (url, json, cb) => {
   return new Promise((resolve,reject) => {
     var xmlhttp = new XMLHttpRequest();
+    xmlhttp.timeout = 3000;
     xmlhttp.open("POST", url, true);
     xmlhttp.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
     xmlhttp.onreadystatechange = function () { //Call a function when the state changes.
