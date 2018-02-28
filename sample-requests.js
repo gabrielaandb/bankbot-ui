@@ -20,12 +20,33 @@ var header = {
   "transactionLegend":        "undefined"
 }
 
+var administrationDestroy = {
+
+}
+
 var getRelationshipSummary = {
   "message": {
     "header": header,
     "body": {
       "customerDetails": {
         "entityUserId":     "john"
+      }
+    }
+  }
+}
+
+var registerUserAccess = {
+  "message": {
+    "body": {
+      "customerDetails": {
+        "userId":   "john",
+        "password": "john",
+        "nationality": "undefined",
+        "countryOfBirth": "undefined",
+        "dateOfBirth": "undefined",
+        "lastName": "<lastName>",
+        "middleName": "<middleName>",
+        "fullName": "<fullName>"
       }
     }
   }
@@ -38,6 +59,39 @@ var validateUserAccess = {
       "customerDetails": {
         "userId":   "john",
         "password": "john"
+      }
+    }
+  }
+}
+
+var deleteUserAccess = {
+  "message": {
+    "header": header,
+    "body": {
+      "customerDetails": {
+        "userId":   "john",
+      }
+    }
+  }
+}
+
+var blockUserAccess = {
+  "message": {
+    "header": header,
+    "body": {
+      "customerDetails": {
+        "userId":   "john",
+      }
+    }
+  }
+}
+
+var resetUserAccess = {
+  "message": {
+    "header": header,
+    "body": {
+      "customerDetails": {
+        "userId":   "john",
       }
     }
   }
@@ -101,6 +155,64 @@ var getPersonalInfo = {
     "body": {
       "customerDetails": {
         "entityUserId":     "john"
+      }
+    }
+  }
+}
+
+var updatePersonalInfo = {
+  "message": {
+    "header": header,
+    "body": {
+      "customerDetails": {
+        "customerType": "001",
+        "fullName": "John B Smith",
+        "middleName": "B",
+        "lastName": "Smith",
+        "dateOfBirth": "1980-11-04",
+        "countryOfBirth": 'United States',
+        "nationality": null,
+        "employeeFlag": false,
+        "delegateFlag": false,
+        "entityUserIdType": "001",
+        "entityUserId": "john",
+        "contactDetails": [
+          {
+            "phoneDetails": [
+              {
+                "phoneType": "003",
+                "phoneCountryCode": "1",
+                "phoneAreaCode": "305",
+                "phoneNumber": "3053005"
+              }
+            ],
+            "emailDetails": [
+              {
+                "emailType": "001",
+                "emailAddress": "personal@fakemail.com"
+              },
+              {
+                "emailType": "002",
+                "emailAddress": "work@fakemail.com"
+              },
+            ],
+            "locationDetails": [
+              {
+                "locationType": "000",
+                "locationStreet": "NW 7th Ave",
+                "locationStreetNumber": "1951",
+                "locationFloor": "6",
+                "locationCity": "Miami",
+                "locationCounty": "Miami-Dade",
+                "locationProvince": null,
+                "locationDistrict": null,
+                "locationState": "FL",
+                "locationZip": "33136",
+                "locationCountry": "US"
+              }
+            ]
+          }
+        ]
       }
     }
   }
@@ -209,13 +321,19 @@ var changePin = {
 }
 
 var SAMPLE_REQUESTS = {
+  '/administration/destroy': administrationDestroy,
   '/relationship-summary/get': getRelationshipSummary,
+  '/manage-user-access/register': registerUserAccess,
   '/manage-user-access/validate': validateUserAccess,
+  '/manage-user-access/delete': deleteUserAccess,
+  '/manage-user-access/block': blockUserAccess,
+  '/manage-user-access/reset': resetUserAccess,
   '/manage-account/details': accountDetails,
   '/manage-account/open': openAccount,
   '/manage-account/close': closeAccount,
   '/get-transaction-activity/account-activity': getTransactionActivity,
   '/manage-personal-info/get': getPersonalInfo,
+  '/manage-personal-info/update': updatePersonalInfo,
   '/manage-authentication-token/generate': generateAuthenticationToken,
   '/manage-authentication-token/validate': validateAuthenticationToken,
   '/manage-product-access/block': blockProductAccess,

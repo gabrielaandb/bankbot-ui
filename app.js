@@ -9,10 +9,31 @@ var app = new Vue({
     error: '',
     response: '',
     title: 'Bankbot',
+    version: 1.2,
     options: [
+      {
+        'name': '000 Administration > Register',
+        'value': '/manage-user-access/register'
+      },
+      {
+        'name': '000 Administration > Destroy (format DB)',
+        'value': '/administration/destroy'
+      },
       {
         'name': '001 Manage User Access > Validate',
         'value': '/manage-user-access/validate'
+      },
+      {
+        'name': '001 Manage User Access > Delete',
+        'value': '/manage-user-access/delete'
+      },
+      {
+        'name': '001 Manage User Access > Block',
+        'value': '/manage-user-access/block'
+      },
+      {
+        'name': '001 Manage User Access > Reset',
+        'value': '/manage-user-access/reset'
       },
       {
         'name': '002 Relationship Summary > Get',
@@ -37,6 +58,10 @@ var app = new Vue({
       {
         'name': '005 Manage Personal Info > Get',
         'value': '/manage-personal-info/get'
+      },
+      {
+        'name': '005 Manage Personal Info > Update',
+        'value': '/manage-personal-info/update'
       },
       {
         'name': '006 Manage Authentication Token > Generate',
