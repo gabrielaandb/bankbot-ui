@@ -86,6 +86,17 @@ var blockUserAccess = {
   }
 }
 
+var unblockUserAccess = {
+  "message": {
+    "header": header,
+    "body": {
+      "customerDetails": {
+        "userId":   "john",
+      }
+    }
+  }
+}
+
 var resetUserAccess = {
   "message": {
     "header": header,
@@ -327,7 +338,7 @@ var SAMPLE_REQUESTS = {
   '/manage-user-access/validate': validateUserAccess,
   '/manage-user-access/delete': deleteUserAccess,
   '/manage-user-access/block': blockUserAccess,
-  '/manage-user-access/reset': resetUserAccess,
+  '/manage-user-access/unblock': unblockUserAccess,
   '/manage-account/details': accountDetails,
   '/manage-account/open': openAccount,
   '/manage-account/close': closeAccount,

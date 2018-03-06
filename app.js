@@ -32,8 +32,8 @@ var app = new Vue({
         'value': '/manage-user-access/block'
       },
       {
-        'name': '001 Manage User Access > Reset',
-        'value': '/manage-user-access/reset'
+        'name': '001 Manage User Access > Unblock',
+        'value': '/manage-user-access/unblock'
       },
       {
         'name': '002 Relationship Summary > Get',
