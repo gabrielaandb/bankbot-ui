@@ -172,6 +172,7 @@ var updateAccount = {
           "accountNewBalance": 0,
           "accountName": "My new checking account",
           "physicalArtifactPin": "undefined",
+          "accountNumber": "<accountNumber>"
         }
       }
     }
