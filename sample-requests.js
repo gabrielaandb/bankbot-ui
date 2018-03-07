@@ -149,6 +149,35 @@ var closeAccount = {
   }
 }
 
+var updateAccount = {
+  "message": {
+    "header": header,
+    "body": {
+      "productDetails": {
+        "productType": "001",
+        "productCode": null,
+        "subProductType": "undefined",
+        "productCurrencyCode": "undefined",
+        "productTransactionRole": null,
+        "accountDetails": {
+          "accountDefaultFlag": false,
+          "accountFilterFlag": false,
+          "physicalArtifactFlag": false,
+          "termsPaid": 0,
+          "currentTerm": 0,
+          "currentTermDate": "0",
+          "currentTermAmount": 0,
+          "daysOfDelay": 0,
+          "accountCurrentBalance": 0,
+          "accountNewBalance": 0,
+          "accountName": "My new checking account",
+          "physicalArtifactPin": "undefined",
+        }
+      }
+    }
+  }
+}
+
 var getTransactionActivity = {
   "message": {
     "header": header,
@@ -342,6 +371,7 @@ var SAMPLE_REQUESTS = {
   '/manage-account/details': accountDetails,
   '/manage-account/open': openAccount,
   '/manage-account/close': closeAccount,
+  '/manage-account/update': updateAccount,
   '/get-transaction-activity/account-activity': getTransactionActivity,
   '/manage-personal-info/get': getPersonalInfo,
   '/manage-personal-info/update': updatePersonalInfo,
