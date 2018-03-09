@@ -2,7 +2,7 @@
 var app = new Vue({
   el: '#app',
   data: {
-    baseUrl: 'http://localhost:8888',
+    baseUrl: 'https://y6igzza3w5.execute-api.us-east-1.amazonaws.com/dev',
     endpoint: '',
     request: '',
     status: '',
@@ -13,91 +13,105 @@ var app = new Vue({
     options: [
       {
         'name': '000 Administration > Register',
-        'value': '/manage-user-access/register'
+        'value': '/access/register'
       },
       {
         'name': '000 Administration > Destroy (format DB)',
         'value': '/administration/destroy'
       },
       {
-        'name': '001 Manage User Access > Validate',
-        'value': '/manage-user-access/validate'
+        'name': '001 Access > Validate',
+        'value': '/access/validate'
       },
       {
-        'name': '001 Manage User Access > Delete',
-        'value': '/manage-user-access/delete'
+        'name': '001 Access > Delete',
+        'value': '/access/delete'
       },
       {
-        'name': '001 Manage User Access > Block',
-        'value': '/manage-user-access/block'
+        'name': '001 Access > Block',
+        'value': '/access/block'
       },
       {
-        'name': '001 Manage User Access > Unblock',
-        'value': '/manage-user-access/unblock'
+        'name': '001 Access > Unblock',
+        'value': '/access/unblock'
       },
       {
-        'name': '002 Relationship Summary > Get',
-        'value': '/relationship-summary/get'
+        'name': '002 Accounts > Summary',
+        'value': '/accounts/summary'
       },
       {
-        'name': '003 Manage Account > Details',
-        'value': '/manage-account/details'
+        'name': '002 Accounts > Details',
+        'value': '/accounts/details'
       },
       {
-        'name': '003 Manage Account > Open',
-        'value': '/manage-account/open'
+        'name': '002 Accounts > Activity',
+        'value': '/accounts/activity'
       },
       {
-        'name': '003 Manage Account > Close',
-        'value': '/manage-account/close'
+        'name': '002 Accounts > Open',
+        'value': '/accounts/open'
       },
       {
-        'name': '003 Manage Account > Update',
-        'value': '/manage-account/update'
+        'name': '002 Accounts > Close',
+        'value': '/accounts/close'
       },
       {
-        'name': '004 Get Transaction Activity > Account Activity',
-        'value': '/get-transaction-activity/account-activity'
+        'name': '002 Accounts > Update',
+        'value': '/accounts/update'
+      },
+
+      {
+        'name': '003 Personal Info > Get',
+        'value': '/personal-information/get'
+      },
+
+      {
+        'name': '003 Personal Info > Update',
+        'value': '/personal-information/update'
       },
       {
-        'name': '005 Manage Personal Info > Get',
-        'value': '/manage-personal-info/get'
+        'name': '003 Personal Info > Add',
+        'value': '/personal-information/add'
       },
       {
-        'name': '005 Manage Personal Info > Update',
-        'value': '/manage-personal-info/update'
+        'name': '003 Personal Info > Delete',
+        'value': '/personal-information/delete'
       },
       {
-        'name': '006 Manage Authentication Token > Generate',
-        'value': '/manage-authentication-token/generate'
+        'name': '004 Token > Generate',
+        'value': '/token/generate'
       },
       {
-        'name': '006 Manage Authentication Token > Validate',
-        'value': '/manage-authentication-token/validate'
+        'name': '004 Token > Validate',
+        'value': '/token/validate'
+      },
+
+      {
+        'name': '005 Products > Block',
+        'value': '/products/block'
       },
       {
-        'name': '007 Manage Product Access > Block',
-        'value': '/manage-product-access/block'
+        'name': '005 Products > Unblock',
+        'value': '/products/unblock'
+      },
+
+      {
+        'name': '006 Transfers > Make',
+        'value': '/transfers/make'
+      },
+
+      {
+        'name': '006 Transfers > Cancel',
+        'value': '/transfers/cancel'
+      },
+
+      {
+        'name': '007 PIN > Validate',
+        'value': '/pin/validate'
       },
       {
-        'name': '007 Manage Product Access > Unblock',
-        'value': '/manage-product-access/unblock'
-      },
-      {
-        'name': '008 Manage Transfers > Make',
-        'value': '/manage-transfers/make-transfer'
-      },
-      {
-        'name': '008 Manage Transfers > Cancel',
-        'value': '/manage-transfers/cancel-transfer'
-      },
-      {
-        'name': '009 Manage PIN > Validate',
-        'value': '/manage-pin/validate'
-      },
-      {
-        'name': '009 Manage PIN > Change',
-        'value': '/manage-pin/change'
+        'name': '007 PIN > Change',
+        'value': '/pin/change'
       },
     ]
   },

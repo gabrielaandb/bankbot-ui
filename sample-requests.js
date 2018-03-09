@@ -363,25 +363,32 @@ var changePin = {
 
 var SAMPLE_REQUESTS = {
   '/administration/destroy': administrationDestroy,
-  '/relationship-summary/get': getRelationshipSummary,
-  '/manage-user-access/register': registerUserAccess,
-  '/manage-user-access/validate': validateUserAccess,
-  '/manage-user-access/delete': deleteUserAccess,
-  '/manage-user-access/block': blockUserAccess,
-  '/manage-user-access/unblock': unblockUserAccess,
-  '/manage-account/details': accountDetails,
-  '/manage-account/open': openAccount,
-  '/manage-account/close': closeAccount,
-  '/manage-account/update': updateAccount,
-  '/get-transaction-activity/account-activity': getTransactionActivity,
-  '/manage-personal-info/get': getPersonalInfo,
-  '/manage-personal-info/update': updatePersonalInfo,
-  '/manage-authentication-token/generate': generateAuthenticationToken,
-  '/manage-authentication-token/validate': validateAuthenticationToken,
-  '/manage-product-access/block': blockProductAccess,
-  '/manage-product-access/unblock': unblockProductAccess,
-  '/manage-transfers/make-transfer': makeTransfer,
-  '/manage-transfers/cancel-transfer': cancelTransfer,
-  '/manage-pin/validate': validatePin,
-  '/manage-pin/change': changePin
+
+  '/access/register': registerUserAccess,
+  '/access/validate': validateUserAccess,
+  '/access/delete': deleteUserAccess,
+  '/access/block': blockUserAccess,
+  '/access/unblock': unblockUserAccess,
+
+  '/accounts/summary': getRelationshipSummary,
+  '/accounts/details': accountDetails,
+  '/accounts/open': openAccount,
+  '/accounts/close': closeAccount,
+  '/accounts/update': updateAccount,
+  '/accounts/activity': getTransactionActivity,
+
+  '/personal-information/get': getPersonalInfo,
+  '/personal-information/update': updatePersonalInfo,
+
+  '/token/generate': generateAuthenticationToken,
+  '/token/validate': validateAuthenticationToken,
+
+  '/products/block': blockProductAccess,
+  '/products/unblock': unblockProductAccess,
+
+  '/transfers/make': makeTransfer,
+  '/transfers/cancel': cancelTransfer,
+
+  '/pin/validate': validatePin,
+  '/pin/change': changePin
 }
