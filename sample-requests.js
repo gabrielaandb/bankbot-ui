@@ -361,10 +361,34 @@ var changePin = {
   }
 }
 
+var makePayment = {
+  "message": {
+    "header": header,
+    "body": {
+      "customerDetails": {
+        "entityUserId": "john",
+        "productDetails": {
+          "accountDetails": {
+            "accountNumber": "<accountNumber>",
+            "physicalArtifactPin": "<pin>",
+            "accountExpirationDate": "",
+            "transactionDetails": {
+              "transactionDocumentNumber": "<transactionDocumentNumber>",
+              "amountDetails": {
+                "amountValue": "<amount>"
+              },
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 var SAMPLE_REQUESTS = {
   '/administration/destroy': administrationDestroy,
+  '/administration/register': registerUserAccess,
 
-  '/access/register': registerUserAccess,
   '/access/validate': validateUserAccess,
   '/access/delete': deleteUserAccess,
   '/access/block': blockUserAccess,
@@ -390,5 +414,7 @@ var SAMPLE_REQUESTS = {
   '/transfers/cancel': cancelTransfer,
 
   '/pin/validate': validatePin,
-  '/pin/change': changePin
+  '/pin/change': changePin,
+
+  '/payments/make': makePayment
 }

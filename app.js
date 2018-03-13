@@ -13,7 +13,7 @@ var app = new Vue({
     options: [
       {
         'name': '000 Administration > Register',
-        'value': '/access/register'
+        'value': '/administration/register'
       },
       {
         'name': '000 Administration > Destroy (format DB)',
@@ -112,6 +112,10 @@ var app = new Vue({
       {
         'name': '007 PIN > Change',
         'value': '/pin/change'
+      },
+      {
+        'name': '008 Payments > Make',
+        'value': '/payments/make'
       },
     ]
   },
