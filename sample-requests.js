@@ -385,6 +385,17 @@ var makePayment = {
   }
 }
 
+var cancelPayment = {
+  "message": {
+    "header": header,
+    "body": {
+      "transactionDetails": {
+        "transactionReferenceNumber": "<transactionReferenceNumber>"
+      }
+    }
+  }
+}
+
 var SAMPLE_REQUESTS = {
   '/administration/destroy': administrationDestroy,
   '/administration/register': registerUserAccess,
@@ -416,5 +427,6 @@ var SAMPLE_REQUESTS = {
   '/pin/validate': validatePin,
   '/pin/change': changePin,
 
-  '/payments/make': makePayment
+  '/payments/make': makePayment,
+  '/payments/cancel': cancelPayment
 }
