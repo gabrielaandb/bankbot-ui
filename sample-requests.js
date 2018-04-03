@@ -380,6 +380,76 @@ var cancelPayment = {
   }
 }
 
+var makeDeposit = {
+  "message": {
+    "header": header,
+    "body": {
+      "customerDetails": {
+        "entityUserId": "john",
+        "productDetails": {
+          "accountDetails": {
+            "accountNumber": "<accountNumber>",
+            "transactionDetails": {
+              "transactionDocumentNumber": "<transactionDocumentNumber>",
+              "transactionDescription": "<transactionDescription>",
+              "amountDetails": {
+                "currency": "USD",
+                "amountValue": "<amount>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+var cancelDeposit = {
+  "message": {
+    "header": header,
+    "body": {
+      "transactionDetails": {
+        "transactionReferenceNumber": "<transactionReferenceNumber>"
+      }
+    }
+  }
+}
+var makeWithdrawal = {
+  "message": {
+    "header": header,
+    "body": {
+      "customerDetails": {
+        "entityUserId": "john",
+        "productDetails": {
+          "accountDetails": {
+            "accountNumber": "<accountNumber>",
+            "transactionDetails": {
+              "transactionDocumentNumber": "<transactionDocumentNumber>",
+              "transactionDescription": "<transactionDescription>",
+              "amountDetails": {
+                "currency": "USD",
+                "amountValue": "<amount>"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+var cancelWithdrawal = {
+  "message": {
+    "header": header,
+    "body": {
+      "transactionDetails": {
+        "transactionReferenceNumber": "<transactionReferenceNumber>"
+      }
+    }
+  }
+}
+
+
 var SAMPLE_REQUESTS = {
   '/administration/destroy': administrationDestroy,
   '/administration/register': registerUserAccess,
@@ -412,5 +482,11 @@ var SAMPLE_REQUESTS = {
   '/pin/change': changePin,
 
   '/payments/make': makePayment,
-  '/payments/cancel': cancelPayment
+  '/payments/cancel': cancelPayment,
+
+  '/deposits/make': makeDeposit,
+  '/deposits/cancel': cancelDeposit,
+
+  '/withdrawals/make': makeWithdrawal,
+  '/withdrawals/cancel': cancelWithdrawal,
 }

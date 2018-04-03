@@ -121,6 +121,22 @@ var app = new Vue({
         'name': '008 Payments > Cancel',
         'value': '/payments/cancel'
       },
+      {
+        'name': '009 Deposits > Make',
+        'value': '/deposits/make'
+      },
+      {
+        'name': '009 Deposits > Cancel',
+        'value': '/deposits/cancel'
+      },
+      {
+        'name': '010 Withdrawals > Make',
+        'value': '/withdrawals/make'
+      },
+      {
+        'name': '010 Withdrawals > Cancel',
+        'value': '/withdrawals/cancel'
+      },
     ]
   },
   methods: {
