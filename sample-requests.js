@@ -1,8 +1,7 @@
 
 // example header for all requests
 var header = {
-  "userId":      "john",
-  "password":    "john"
+  "userAccessToken": "<userAccessToken>"
 }
 
 var administrationDestroy = {
@@ -11,12 +10,7 @@ var administrationDestroy = {
 
 var getRelationshipSummary = {
   "message": {
-    "body": {
-      "customerDetails": {
-        "entityUserId": "john",
-        "password": "john"
-      }
-    }
+    "header": header
   }
 }
 
@@ -87,6 +81,17 @@ var resetUserAccess = {
     "body": {
       "customerDetails": {
         "userId":   "john",
+      }
+    }
+  }
+}
+
+var generateUserAccessToken = {
+  "message": {
+    "body": {
+      "customerDetails": {
+        "userId":   "john",
+        "password": "john"
       }
     }
   }
@@ -454,10 +459,12 @@ var SAMPLE_REQUESTS = {
   '/administration/destroy': administrationDestroy,
   '/administration/register': registerUserAccess,
 
+  '/access/register': registerUserAccess,
   '/access/validate': validateUserAccess,
   '/access/delete': deleteUserAccess,
   '/access/block': blockUserAccess,
   '/access/unblock': unblockUserAccess,
+  '/access/token/generate': generateUserAccessToken,
 
   '/accounts/summary': getRelationshipSummary,
   '/accounts/details': accountDetails,

@@ -20,6 +20,10 @@ var app = new Vue({
         'value': '/administration/destroy'
       },
       {
+        'name': '001 Access > Register',
+        'value': '/access/register'
+      },
+      {
         'name': '001 Access > Validate',
         'value': '/access/validate'
       },
@@ -34,6 +38,10 @@ var app = new Vue({
       {
         'name': '001 Access > Unblock',
         'value': '/access/unblock'
+      },
+      {
+        'name': '001 Access > Token > Generate',
+        'value': '/access/token/generate'
       },
       {
         'name': '002 Accounts > Summary',
