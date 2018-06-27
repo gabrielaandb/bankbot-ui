@@ -112,6 +112,10 @@ var app = new Vue({
         'name': '006 Transfers > Cancel',
         'value': '/transfers/cancel'
       },
+      {
+        'name': '006 Transfers > Payees > List',
+        'value': '/transfers/payees/list'
+      },
 
       {
         'name': '007 PIN > Validate',

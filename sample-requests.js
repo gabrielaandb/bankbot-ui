@@ -325,6 +325,13 @@ var cancelTransfer = {
   }
 }
 
+var listPayees = {
+  "message": {
+    "header": header,
+    "body": {}
+  }
+}
+
 var validatePin = {
   "message": {
     "header": header,
@@ -484,6 +491,8 @@ var SAMPLE_REQUESTS = {
 
   '/transfers/make': makeTransfer,
   '/transfers/cancel': cancelTransfer,
+
+  '/transfers/payees/list': listPayees,
 
   '/pin/validate': validatePin,
   '/pin/change': changePin,
